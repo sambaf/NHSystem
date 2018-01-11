@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{fragments/main_layout}" >
+<head>
+ <title>Index Page</title>
+</head>
+<body>
+
+     <div  layout:fragment="content" class="container mySpace">
+         <div>
+         
+            There was an error  |<span th:text="${message}"></span>| <span th:text="${status}" class="text text-danger"></span>
+         
+         </div>
+         <div>
+           Please contact SambaMedia if you have reached this far!!!!
+         </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Index Page</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+
+		<div class="card">
+			<div class="card card-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Start Time</th>
+							<th>Stop Time</th>
+							<td>Description</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="task:${tasks}">
+							<td th:text="${task.date}"></td>
+							<td th:text="${task.startTime}"></td>
+							<td th:text="${task.stopTime}"></td>
+							<td th:text="${task.description}"></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
